@@ -3,120 +3,322 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Campanha solidária para apoiar famílias afetadas pelas chuvas em Santa Catarina e no Rio Grande do Sul.">
+
+  <meta name="description"
+        content="Campanha solidária para apoiar famílias afetadas pelas chuvas em Santa Catarina e no Rio Grande do Sul.">
+
   <title>Vamos Ajudar Santa Catarina e Rio Grande do Sul</title>
-  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" href="estilo.css">
 </head>
+
 <body>
+
   <header class="top">
     <div class="container nav">
-      <div class="brand">SOLIDARIEDADE NÃO TEM DISTÂNCIA</div>
-      <a class="nav-button" href="#doar">Quero ajudar</a>
+
+      <div class="brand">
+        SOLIDARIEDADE NÃO TEM DISTÂNCIA
+      </div>
+
+      <a class="nav-button" href="#doar">
+        Quero ajudar
+      </a>
+
     </div>
   </header>
 
+
   <main>
+
+    <!-- IMAGEM PRINCIPAL DA CAMPANHA -->
     <section class="hero">
       <div class="container">
+
         <img src="campanha.png"
              alt="Campanha solidária para Santa Catarina e Rio Grande do Sul"
              class="campaign-image">
+
       </div>
     </section>
 
+
+    <!-- INFORMAÇÕES DA CAMPANHA -->
     <section class="campaign">
+
       <div class="container">
+
         <div class="campaign-card">
-          <span class="tag">CAMPANHA SOLIDÁRIA</span>
-          <h1>Vamos ajudar Santa Catarina e Rio Grande do Sul</h1>
+
+          <span class="tag">
+            CAMPANHA SOLIDÁRIA
+          </span>
+
+
+          <h1>
+            Vamos ajudar Santa Catarina e Rio Grande do Sul
+          </h1>
+
+
           <p class="lead">
             Esta página reúne informações da campanha e os meios para quem deseja contribuir.
             Toda ajuda e todo compartilhamento podem fazer diferença para as famílias atingidas.
           </p>
 
+
+          <!-- VALORES -->
           <div class="stats">
+
             <div>
               <strong>Meta</strong>
               <span>R$ 10.000,00</span>
             </div>
+
             <div>
               <strong>Arrecadado</strong>
               <span>R$ 0,00</span>
             </div>
+
             <div>
               <strong>Progresso</strong>
               <span>0%</span>
             </div>
+
           </div>
+
 
           <div class="progress">
             <div class="progress-bar" style="width: 0%"></div>
           </div>
 
+
+          <!-- ÁREA DE DOAÇÃO -->
           <div id="doar" class="donation">
-            <h2>Como ajudar</h2>
-            <p>Escolha uma das opções abaixo para contribuir.</p>
 
-            <!--
-              IMPORTANTE:
-              Substitua os links abaixo pelos seus links reais antes de publicar.
-            -->
-            <a class="donate-button" href="SEU_LINK_DA_VAQUINHA" target="_blank" rel="noopener">
+            <h2>
+              Como ajudar
+            </h2>
+
+            <p>
+              Sua contribuição pode ser realizada através do Pix.
+            </p>
+
+
+            <!-- BOTÃO DOAR -->
+            <button
+              class="donate-button"
+              type="button"
+              onclick="document.getElementById('pix-area').scrollIntoView({behavior:'smooth'})">
+
               💚 DOAR AGORA
-            </a>
 
-            <button class="pix-button" id="pixButton" type="button">
-              📋 COPIAR CHAVE PIX
             </button>
-            <p class="pix-key" id="pixKey">COLOQUE_SUA_CHAVE_PIX_AQUI</p>
-            <p class="small" id="pixMessage"></p>
 
-            <a class="share-button" href="https://wa.me/?text=Quero%20compartilhar%20esta%20campanha%20solid%C3%A1ria%3A%20SEU_LINK_DA_VAQUINHA" target="_blank" rel="noopener">
+
+            <!-- ÁREA DO PIX -->
+            <div id="pix-area" class="pix-area">
+
+              <h3>
+                💚 Faça sua contribuição pelo Pix
+              </h3>
+
+
+              <p>
+                Aponte a câmera do aplicativo do seu banco para o QR Code abaixo:
+              </p>
+
+
+              <!-- QR CODE -->
+              <div class="qr-container">
+
+                <img
+                  src="pix.png"
+                  alt="QR Code para pagamento via Pix"
+                  class="pix-qr">
+
+              </div>
+
+
+              <p class="pix-label">
+                Chave Pix:
+              </p>
+
+
+              <p class="pix-key" id="pixKey">
+                8ae5a080-4304-44de-8f0d-589d77a99c1d
+              </p>
+
+
+              <!-- COPIAR CHAVE -->
+              <button
+                class="pix-button"
+                id="pixButton"
+                type="button">
+
+                📋 COPIAR CHAVE PIX
+
+              </button>
+
+
+              <!-- COPIAR PIX COPIA E COLA -->
+              <button
+                class="pix-button"
+                id="pixCodeButton"
+                type="button">
+
+                📋 COPIAR PIX COPIA E COLA
+
+              </button>
+
+
+              <p
+                class="small"
+                id="pixMessage">
+              </p>
+
+
+              <!-- PIX COPIA E COLA -->
+              <details class="pix-details">
+
+                <summary>
+                  Ver código Pix Copia e Cola
+                </summary>
+
+                <p class="pix-code" id="pixCode">
+                  00020101021226580014br.gov.bcb.pix01368ae5a080-4304-44de-8f0d-589d77a99c1d5204000053039865802BR5907MATHEUS6014BELO HORIZONTE62070503***6304E0F1
+                </p>
+
+              </details>
+
+            </div>
+
+
+            <!-- COMPARTILHAR -->
+            <a
+              class="share-button"
+              href="https://wa.me/?text=Quero%20compartilhar%20esta%20campanha%20solid%C3%A1ria%3A%20https%3A%2F%2Fjuntospelosul.github.io%2Fjuntos-pelo-sul%2F"
+              target="_blank"
+              rel="noopener">
+
               WhatsApp — compartilhar campanha
+
             </a>
+
           </div>
 
+
+          <!-- SOBRE -->
           <div class="info">
-            <h2>Sobre a campanha</h2>
+
+            <h2>
+              Sobre a campanha
+            </h2>
+
             <p>
               A campanha foi criada para facilitar a divulgação e o acesso às formas de contribuição.
-              Antes de realizar uma doação, confira os dados e o destino informado no link oficial da arrecadação.
+              Toda ajuda e todo compartilhamento podem fazer diferença para as famílias atingidas.
             </p>
+
           </div>
 
+
+          <!-- TRANSPARÊNCIA -->
           <div class="notice">
-            <strong>Transparência</strong>
+
+            <strong>
+              Transparência
+            </strong>
+
             <p>
-              Mantenha nesta página informações atualizadas sobre a campanha, destino dos recursos
-              e eventuais comprovantes de utilização das doações.
+              Mantenha nesta página informações atualizadas sobre a campanha,
+              destino dos recursos e eventuais comprovantes de utilização das doações.
             </p>
+
           </div>
+
         </div>
+
       </div>
+
     </section>
+
   </main>
 
+
+  <!-- RODAPÉ -->
   <footer>
+
     <div class="container">
-      <p>Juntos por um amanhã melhor! ❤️</p>
-      <p class="footer-small">Página independente de divulgação da campanha.</p>
+
+      <p>
+        Juntos por um amanhã melhor! ❤️
+      </p>
+
+      <p class="footer-small">
+        Página independente de divulgação da campanha.
+      </p>
+
     </div>
+
   </footer>
 
+
+  <!-- JAVASCRIPT DO PIX -->
   <script>
+
     const pixButton = document.getElementById("pixButton");
+    const pixCodeButton = document.getElementById("pixCodeButton");
+
     const pixKey = document.getElementById("pixKey");
+    const pixCode = document.getElementById("pixCode");
+
     const pixMessage = document.getElementById("pixMessage");
 
+
+    // COPIAR CHAVE PIX
     pixButton.addEventListener("click", async () => {
+
       const key = pixKey.textContent.trim();
+
       try {
+
         await navigator.clipboard.writeText(key);
-        pixMessage.textContent = "Chave PIX copiada!";
+
+        pixMessage.textContent =
+          "✅ Chave Pix copiada!";
+
       } catch {
-        pixMessage.textContent = "Não foi possível copiar automaticamente. Selecione e copie a chave acima.";
+
+        pixMessage.textContent =
+          "Não foi possível copiar automaticamente. Selecione e copie a chave.";
+
       }
+
     });
+
+
+    // COPIAR PIX COPIA E COLA
+    pixCodeButton.addEventListener("click", async () => {
+
+      const code = pixCode.textContent.trim();
+
+      try {
+
+        await navigator.clipboard.writeText(code);
+
+        pixMessage.textContent =
+          "✅ Pix Copia e Cola copiado!";
+
+      } catch {
+
+        pixMessage.textContent =
+          "Não foi possível copiar automaticamente. Selecione o código e copie.";
+
+      }
+
+    });
+
   </script>
+
 </body>
 </html>
